@@ -27,7 +27,6 @@ public class Main {
         }
         */
 
-        String version;
         int clientDeviceYear = 2009;
         if (clientDeviceYear >= 2015) {
             switch (clientOS) {
