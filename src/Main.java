@@ -56,13 +56,22 @@ public class Main {
         } else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год является високоснымю");
         } else {
-                System.out.println(year + " год не является високосным.");
-            }
+            System.out.println(year + " год не является високосным.");
+        }
 
 
-            // Task #4
-            int deliveryDistance = 53;
-            int deliveryDays = 1;
+        // Task #4
+        int deliveryDistance = 53;
+        int deliveryDays = 1;
+        if (deliveryDistance > 100) {
+            System.out.println("Нет доставки");
+        } else if (deliveryDistance > 20) {
+            deliveryDays++;
+        } else if (deliveryDistance > 60) {
+            deliveryDays++;
+        }
+        System.out.println("Доставка займет " + deliveryDays + " суток");
+            /*
             if (deliveryDistance <= 20) {
                 System.out.println("Потребуется дней: " + (deliveryDays));
             } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
@@ -72,24 +81,25 @@ public class Main {
             } else {
                 System.out.println("В этом радиусе доставки нет.");
             }
+            */
 
-            // Task #5
-            int monthNumber = 7;
-            switch (monthNumber) {
-                case 12, 1, 2:
-                    System.out.println("Время года - зима.");
-                    break;
-                case 3, 4, 5:
-                    System.out.println("Время года - весна.");
-                    break;
-                case 6, 7, 8:
-                    System.out.println("Время года - лето.");
-                    break;
-                case 9, 10, 11:
-                    System.out.println("Время года - осень.");
-                    break;
-                default:
-                    System.out.println("Такого месяца не существует.");
-            }
+        // Task #5
+        int monthNumber = 7;
+        switch (monthNumber) {
+            case 12, 1, 2:
+                System.out.println("Время года - зима.");
+                break;
+            case 3, 4, 5:
+                System.out.println("Время года - весна.");
+                break;
+            case 6, 7, 8:
+                System.out.println("Время года - лето.");
+                break;
+            case 9, 10, 11:
+                System.out.println("Время года - осень.");
+                break;
+            default:
+                System.out.println("Такого месяца не существует.");
         }
     }
+}
